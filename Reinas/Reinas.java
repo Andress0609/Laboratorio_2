@@ -76,6 +76,15 @@ package Reinas;
 
         return false;
     }
+      public boolean inicializar() {
+
+        if (solucion(0)==false) {
+            System.out.println("No Hay solucion");
+            return false;
+        }
+
+        return true;
+    }
    }
  
 
