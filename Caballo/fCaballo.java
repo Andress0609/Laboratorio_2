@@ -4,10 +4,15 @@
  */
 package Caballo;
 
+import Tableros.Tablero;
+
 /**
  *
  * @author user
  */
 public class fCaballo {
-   
+    public Tablero tablero;
+    public int UltimoMovimiento[][];
+    public int Posicion;
+
 }
