@@ -50,6 +50,32 @@ package Reinas;
 
 
     }
+     public boolean solucion(int columna) {
+        if (columna >=NR) {
+            return true;
+        }
+        
+        for (int i = 0; i < NR; i++) {
+            System.out.println("Fila: " + i + " Columna: " + columna);
+            if (posicion(i, columna)) {
+                System.out.println("");
+                System.out.println("");
+                System.out.println("Vuelve a entrar");
+                tablero[i][columna]=1;
+                //imprimir();
+                if (solucion(columna+1)) {
+
+                    return true;
+                }
+
+                tablero[i][columna]=0;
+                System.out.println("");
+                System.out.println("");
+            }
+        }
+
+        return false;
+    }
    }
  
 
