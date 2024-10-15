@@ -10,23 +10,23 @@ import Tableros.Tablero;
  *
  * @author user
  */
-public class fCaballo {
+public class Caballo {
     public Tablero tablero;
-    public int UltimoMovimiento[][];
-    public int Posicion;
+    public int ultimoMovimiento[][];
+    public int posicion;
     
-     public fCaballo(Tablero tablero) {
+     public Caballo(Tablero tablero) {
         this.tablero = tablero;
-        UltimoMovimiento = new int[1][2];
-        Posicion = 0;
+        ultimoMovimiento = new int[1][2];
+        posicion = 0;
 
 }
       public int[][] getUltimoMovimiento() {
-        return UltimoMovimiento;
+        return ultimoMovimiento;
     }
 
     public void setUltimoMovimiento(int[][] UltimoMovimiento) {
-        this.UltimoMovimiento = UltimoMovimiento;
+        this.ultimoMovimiento = UltimoMovimiento;
     }
 
     public Tablero getTablero() {
@@ -42,8 +42,8 @@ public class fCaballo {
         for (int i = 0; i < 8; i++) {
             AsignarJugada(i);
 
-            fila = fila + UltimoMovimiento[0][0];
-            columna = columna + UltimoMovimiento[0][1];
+            fila = fila + ultimoMovimiento[0][0];
+            columna = columna + ultimoMovimiento[0][1];
 
             if (IndicarMovimiento(fila, columna)) {
                 RealizarMovimiento(fila, columna);
@@ -52,11 +52,11 @@ public class fCaballo {
                 continue;
             }
             this.RegresarFilasColumnas(fila, columna, i);
-            fila = UltimoMovimiento[0][0];
-            columna = UltimoMovimiento[0][1];
+            fila = ultimoMovimiento[0][0];
+            columna = ultimoMovimiento[0][1];
 
-            UltimoMovimiento[0][0] = 0;
-            UltimoMovimiento[0][1] = 0;
+            ultimoMovimiento[0][0] = 0;
+            ultimoMovimiento[0][1] = 0;
         }
 
 //        if (this.xIndicarMovimiento(x[0][0], x[0][1]) && x[0][0]!=0 && x[0][0]==0) {
@@ -75,63 +75,63 @@ public class fCaballo {
     public void AsignarJugada(int Indicador) {
         switch (Indicador) {
             case 0: {
-                UltimoMovimiento[0][0] = -2;
-                UltimoMovimiento[0][1] = 1;
+                ultimoMovimiento[0][0] = -2;
+                ultimoMovimiento[0][1] = 1;
                 break;
             }
 
             case 1: {
 
-                UltimoMovimiento[0][0] = -2;
-                UltimoMovimiento[0][1] = -1;
+                ultimoMovimiento[0][0] = -2;
+                ultimoMovimiento[0][1] = -1;
                 break;
 
             }
 
             case 2: {
 
-                UltimoMovimiento[0][0] = -1;
-                UltimoMovimiento[0][1] = -2;
+                ultimoMovimiento[0][0] = -1;
+                ultimoMovimiento[0][1] = -2;
                 break;
 
             }
 
             case 3: {
 
-                UltimoMovimiento[0][0] = 1;
-                UltimoMovimiento[0][1] = -2;
+                ultimoMovimiento[0][0] = 1;
+                ultimoMovimiento[0][1] = -2;
                 break;
 
             }
 
             case 4: {
 
-                UltimoMovimiento[0][0] = 2;
-                UltimoMovimiento[0][1] = -1;
+                ultimoMovimiento[0][0] = 2;
+                ultimoMovimiento[0][1] = -1;
                 break;
 
             }
 
             case 5: {
 
-                UltimoMovimiento[0][0] = 2;
-                UltimoMovimiento[0][1] = 1;
+                ultimoMovimiento[0][0] = 2;
+                ultimoMovimiento[0][1] = 1;
                 break;
 
             }
 
             case 6: {
 
-                UltimoMovimiento[0][0] = -1;
-                UltimoMovimiento[0][1] = 2;
+                ultimoMovimiento[0][0] = -1;
+                ultimoMovimiento[0][1] = 2;
                 break;
 
             }
 
             case 7: {
 
-                UltimoMovimiento[0][0] = 1;
-                UltimoMovimiento[0][1] = 2;
+                ultimoMovimiento[0][0] = 1;
+                ultimoMovimiento[0][1] = 2;
                 break;
 
             }
@@ -140,18 +140,18 @@ public class fCaballo {
     }
 
     public void RealizarMovimiento(int fila, int columna) {
-        Posicion++;
-        this.getTablero().tabla[fila][columna] = Posicion;
+        posicion++;
+        this.getTablero().tabla[fila][columna] = posicion;
     }
 
     public void RegresarFilasColumnas(int fila, int columna, int x) {
 //        if (xIndicarMovimiento(UltimoMovimiento[0][0], UltimoMovimiento[0][1]) && x == 7) {
 //            this.tablero.tabla[UltimoMovimiento[0][0]][UltimoMovimiento[0][1]] = 0;
 //        }
-        UltimoMovimiento[0][0] = UltimoMovimiento[0][0] * -1;
-        UltimoMovimiento[0][1] = UltimoMovimiento[0][1] * -1;
-        UltimoMovimiento[0][0] = (fila + UltimoMovimiento[0][0]);
-        UltimoMovimiento[0][1] = (columna + UltimoMovimiento[0][1]);
+        ultimoMovimiento[0][0] = ultimoMovimiento[0][0] * -1;
+        ultimoMovimiento[0][1] = ultimoMovimiento[0][1] * -1;
+        ultimoMovimiento[0][0] = (fila + ultimoMovimiento[0][0]);
+        ultimoMovimiento[0][1] = (columna + ultimoMovimiento[0][1]);
 
     }
 //
