@@ -27,6 +27,29 @@ package Reinas;
         System.out.print("\n\n");
     }
     }
+    public boolean posicion(int fila, int columna) {
+
+        for (int j = 0; j < columna; j++) {
+            //System.out.println(j);
+            if (tablero[fila][j]==1) {
+                System.out.println(tablero[fila][j]);
+                return false; 
+            }
+        }
+        for (int i=fila, j=columna; i>=0 && j>=0; i--, j--) {
+            if (tablero[i][j]==1) {
+                return false; 
+            }
+        }
+        for (int i=fila, j=columna; j>=0 && i<NR; i++, j--) {
+            if (tablero[i][j]==1) {
+                return false; 
+            }
+        }
+        return true; 
+
+
+    }
    }
  
 
