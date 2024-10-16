@@ -51,17 +51,7 @@ public class Tablero {
         
     }
     
-    public boolean BuscarRemover(int num){
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                if (tabla[i][j]==num) {
-                    tabla[i][j] = 0;
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+    
     
     public boolean Buscar(int num){
         for (int i = 0; i < 8; i++) {
