@@ -13,7 +13,6 @@ import java.util.Arrays;
  */
 public class laboratorio2ajedrez {
     public static void main(String[] args) {
-        // TODO code application logic here
 
         Tablero t = new Tablero();
 
@@ -21,9 +20,7 @@ public class laboratorio2ajedrez {
 
         c.DarPosicionesIniciales(0, 0);
 
-//        c.DarPosicionInicial(4, 4);
-//        c.EmpezarMovimiento(7, 0, 1);
-//        
+     
         System.out.println("    | [0 ][1 ][2 ][3 ][4 ][5 ][6 ][7 ]\n---------------------------------------");
         for (int i = 0; i < 8; i++) {
             System.out.print("[" + i + "] | ");
@@ -35,13 +32,6 @@ public class laboratorio2ajedrez {
                 }
             }
             System.out.println(" ");
-        }
-//        
-//        if (!t.BuscarRemover(0)) {
-//            System.out.println("Se logro completar");
-//        } else {
-//            System.out.println("No se completo");
-//        }
-//        
+        } 
     }
 }
