@@ -12,7 +12,7 @@ import Tableros.Tablero;
  */
 public class Caballo {
     public Tablero tablero;
-    public int ultimoMovimiento[];
+    public int ultimoMovimiento[][];
     public int posicion;
     
      public Caballo(Tablero tablero) {
