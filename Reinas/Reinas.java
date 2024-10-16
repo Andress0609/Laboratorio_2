@@ -30,7 +30,7 @@ package Reinas;
     public boolean posicion(int fila, int columna) {
 
         for (int j = 0; j < columna; j++) {
-            //System.out.println(j);
+            
             if (tablero[fila][j]==1) {
                 System.out.println(tablero[fila][j]);
                 return false; 
@@ -62,7 +62,7 @@ package Reinas;
                 System.out.println("");
                 System.out.println("Vuelve a entrar");
                 tablero[i][columna]=1;
-                //imprimir();
+    
                 if (solucion(columna+1)) {
 
                     return true;
