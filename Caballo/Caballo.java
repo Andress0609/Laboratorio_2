@@ -59,11 +59,7 @@ public class Caballo {
             ultimoMovimiento[0][1] = 0;
         }
 
-//        if (this.xIndicarMovimiento(x[0][0], x[0][1]) && x[0][0]!=0 && x[0][0]==0) {
-//            System.out.println("FILA "+x[0][0]+ " COLUMNA "+x[0][1]);
-//            this.tablero.tabla[x[0][0]][x[0][1]] = 0;
-//            Posicion--;
-//        }
+
     }
 
     public void DarPosicionesIniciales(int fila, int columna) {
@@ -145,27 +141,14 @@ public class Caballo {
     }
 
     public void RegresarFilasColumnas(int fila, int columna, int x) {
-//        if (xIndicarMovimiento(UltimoMovimiento[0][0], UltimoMovimiento[0][1]) && x == 7) {
-//            this.tablero.tabla[UltimoMovimiento[0][0]][UltimoMovimiento[0][1]] = 0;
-//        }
+
         ultimoMovimiento[0][0] = ultimoMovimiento[0][0] * -1;
         ultimoMovimiento[0][1] = ultimoMovimiento[0][1] * -1;
         ultimoMovimiento[0][0] = (fila + ultimoMovimiento[0][0]);
         ultimoMovimiento[0][1] = (columna + ultimoMovimiento[0][1]);
 
     }
-//
-//    public boolean xIndicarMovimiento(int fila, int columna) {
-//        try {
-//            if (tablero.getTabla()[fila][columna] != 0) {
-//                return true;
-//            } else {
-//                return false;
-//            }
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
+
 
     public boolean IndicarMovimiento(int fila, int columna) {
         try {
@@ -180,8 +163,5 @@ public class Caballo {
         }
     }
 
-//        for (int i = 0; i < tablero.getTabla().length; i++) {
-//            
-//        }
 
 }
